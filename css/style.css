@@ -9,9 +9,103 @@
 }
 
 body {
-    background: #1F1F1F;
+    font: normal 75% Nunito Sans, sans-serif;
 }
 
+h4 {
+    font-size: 2.28rem;
+    line-height: 110%;
+    margin: 1.52rem 0 .912rem 0;
+}
+
+h5 {
+    font-size: 1.64rem;
+    line-height: 110%;
+    margin: 1.0933333333rem 0 .656rem 0;
+}
+
+.home.reveal {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.home hr {
+    width: 20%;
+    float: left;
+    display: block;
+    position: absolute;
+    border: 2px dashed #696969;
+}
+
+.background {
+    position: fixed;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(31, 31, 31);
+}
+
+.background > canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.over {
+    top: 10%;
+    left: 10%;
+    position: relative;
+    z-index: 1;
+}
+
+
+.title {
+    color: yellow;
+    padding: 10px 0 10px 15px;
+    font-size: 100px;
+    font-family: Nunito Sans;
+}
+
+.typewrite > .wrap {
+    border-right: 0.08em solid yellow;
+}
+
+.home {
+    color: #d2d2d3;
+}
+
+.home-grid > a > .box.link, .home-grid > .box.link {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-gap: 30px;
+}
+
+.home-grid > a {
+    text-decoration: none;
+}
+
+.home-grid > a > .box, .home-grid > .box {
+    background-color: #ffeb3b;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    color: #171717;
+    border-radius: 3px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+
+
+  /* The typing effect */
 .header {
     min-height: 200px;
 }
