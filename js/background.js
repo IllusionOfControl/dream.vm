@@ -9,7 +9,7 @@ properties = {
     bgColor             : 'rgba(38, 0, 27 ,1)',
     particleColor       : 'rgba(199, 1, 39, 1)',
     particleRadius      : 2,
-    particleCount       : 200,
+    particleCount       : 180,
     particleMaxVelocity : 0.5,
     lineLength          : 150,
 };
