@@ -1,15 +1,10 @@
 @font-face {
-    font-family: 'Nunito Sans', sans-serif;
-    src: url('/font/NunitoSans-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Kaushan Script';
-    src: url('/font/KaushanScript-Regular.ttf');
+    font-family: 'Work Sans';
+    src: url('/font/WorkSans-VariableFont.ttf');
 }
 
 body {
-    font: normal 75% Nunito Sans, sans-serif;
+    font: normal 75% Work Sans, sans-serif;
 }
 
 h4 {
@@ -56,6 +51,7 @@ h5 {
 .over {
     top: 10%;
     left: 10%;
+    width: auto;
     position: relative;
     z-index: 1;
 }
@@ -65,7 +61,7 @@ h5 {
     color: yellow;
     padding: 10px 0 10px 15px;
     font-size: 100px;
-    font-family: Nunito Sans;
+    font-family: Work Sans;
 }
 
 .typewrite > .wrap {
@@ -101,85 +97,4 @@ h5 {
     border-radius: 3px;
     text-align: center;
     transition: 0.3s;
-}
-
-
-
-  /* The typing effect */
-.header {
-    min-height: 200px;
-}
-
-.header-brand {
-    margin-top: 125px;
-    text-align: center;
-    user-select: none;
-}
-
-.header-brand > span {  
-    font-family: Kaushan Script;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 72px;
-    line-height: 104px;
-    
-    color: #C70127;
-}
-
-.header-brand > img {    
-    width: 172px;
-    height: 108px;
-    border: 0px;
-	-webkit-user-select: none;
-	-webkit-user-drag: none;
-	-webkit-app-region: no-drag;
-	cursor: default;
-}
-
-.projects-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-
-.project-item {
-    padding: 15px 15px 15px 15px;
-    margin: 50px 50px 50px 50px;
-    text-decoration: none;
-}
-
-.project-item:hover {
-    background-color: #2E2E2E;
-    border-radius: 15px;
-}
-
-.project-item:hover 
-.project-logo>img {
-    border: 4px solid #C70127;
-}
-
-.project-logo > img {
-    width: 371px;
-    height: 327px;
-    border: 4px solid #2E2E2E;
-    box-sizing: border-box;
-    border-radius: 15px;
-    object-fit: cover;
-}
-
-.project-name {
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    color: #FFFFFF;
-}
-
-.project-description {
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #aaaaaa;
 }
