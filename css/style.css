@@ -105,6 +105,11 @@ h5 {
         font-size: 3.2rem;
     }
 
+    .home hr {
+        width: 50%;
+        border: 5px dashed #696969;
+    }
+
     .home-grid {
         grid-template-columns: 300px;
     }

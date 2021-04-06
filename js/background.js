@@ -1,8 +1,11 @@
 var canvas = document.getElementById('background-particles');
 var context = canvas.getContext('2d');
 
-w = canvas.width = innerWidth;
-h = canvas.height = innerHeight;
+w = canvas.width = window.innerWidth;
+h = canvas.height = window.innerHeight;
+
+context.scale(innerWidth / w, innerHeight / h);
+
 particles = [];
 particleGraph = new Map;
 properties = {
@@ -125,6 +128,8 @@ function drawBackground(){
 }
 
 function canvas_loop() {
+    
+
     drawBackground();
     updateParticles();
     calculateDestinations();
