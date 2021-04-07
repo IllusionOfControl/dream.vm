@@ -1,8 +1,8 @@
-var canvas = document.getElementById('background-particles');
-var context = canvas.getContext('2d');
+const canvas = document.getElementById('background-particles');
+const context = canvas.getContext('2d');
 
-w = canvas.width = window.innerWidth;
-h = canvas.height = window.innerHeight;
+let w = canvas.width = window.innerWidth;
+let h = canvas.height = window.innerHeight;
 
 context.scale(innerWidth / w, innerHeight / h);
 
@@ -20,8 +20,8 @@ properties = {
 document.querySelector('.background').appendChild(canvas);
 
 window.onresize = function(){
-    w = canvas.width = innerWidth,
-    h = canvas.height = innerHeight;        
+    w = canvas.width = innerWidth;
+    h = canvas.height = innerHeight;
 };
 
 class Particle{
@@ -86,7 +86,7 @@ function drawLine(x1, y1, x2, y2, opacity) {
 }
 
 function drawParticles() {
-    for (var i in particles) {
+    for (let i in particles) {
         if (particles[i].isDead) continue;
         particles[i].draw();
     }
@@ -95,11 +95,11 @@ function drawParticles() {
 
 function drawLines() {
     particleGraph.forEach((value, key, map) => {
-        point1 = value.point1;
-        point2 = value.point2;
+        let point1 = value.point1;
+        let point2 = value.point2;
         if (point1.isDead || point2.isDead) return;
         if (value.length < properties.lineLength) {
-            opacity = 1-value.length/properties.lineLength;
+            let opacity = 1-value.length/properties.lineLength;
             drawLine(point1.x, point1.y, point2.x, point2.y, opacity);
         }
     });
@@ -116,7 +116,8 @@ function calculateDestinations() {
 }
 
 function updateParticles() {
-    for (var i in particles) {
+    for (let i in particles) {
+        if (particles[i].x > w || particles[i].y > h) particles[i].resurrection();
         particles[i].position();
         particles[i].calculateNeighbors();
     }
@@ -128,8 +129,6 @@ function drawBackground(){
 }
 
 function canvas_loop() {
-    
-
     drawBackground();
     updateParticles();
     calculateDestinations();
@@ -139,16 +138,17 @@ function canvas_loop() {
 }
 
 function canvas_init() {
-    for(var i = 0 ; i < properties.particleCount ; i++){
+    for(let i = 0 ; i < properties.particleCount ; i++){
         particles.push(new Particle);
     }
 
-    for(var i in particles) {
-        for(var j in particles) {
+    for(let i in particles) {
+        for(let j in particles) {
             if (i === j ) continue;
-            point1 = particles[i];
-            point2 = particles[j];
-            key = 0;
+            let point1 = particles[i];
+            let point2 = particles[j];
+            let key = 0;
+
             if (i < j) {
                 key = (i << 10) + j;
             } else {
